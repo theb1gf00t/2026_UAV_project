@@ -1,0 +1,240 @@
+=================================================================
+  MAPPO EVALUATION REPORT — UAV Crop Disease Monitoring
+=================================================================
+  Device   : cuda
+  GPU      : NVIDIA GeForce RTX 3050 6GB Laptop GPU
+  Episodes trained : 1000
+  Grid     : 4x3 = 12 sectors
+  UAVs     : 2
+  Days     : 30
+
+=================================================================
+  FINAL SUMMARY
+=================================================================
+  Total reward          : 39.16
+  Sectors visited       : 7 / 12
+  Infected found        : 3
+  True infected (final) : 9
+  Detection rate        : 33.3%
+  Coverage rate         : 58.3%
+  Energy left UAV 0     : 58.0 / 100  (58%)
+  Energy left UAV 1     : 60.0 / 100  (60%)
+
+=================================================================
+  UAV MOVEMENT PATHS (row, col)
+=================================================================
+  UAV 0:
+    Day00:(0, 0)  →  Day01:(0, 0)  →  Day02:(0, 0)  →  Day03:(0, 0)  →  Day04:(0, 0)  →  Day05:(0, 0)
+    Day06:(0, 0)  →  Day07:(0, 0)  →  Day08:(0, 0)  →  Day09:(0, 0)  →  Day10:(0, 0)  →  Day11:(1, 0)
+    Day12:(1, 0)  →  Day13:(1, 0)  →  Day14:(1, 0)  →  Day15:(1, 1)  →  Day16:(0, 1)  →  Day17:(1, 1)
+    Day18:(1, 1)  →  Day19:(2, 1)  →  Day20:(2, 1)  →  Day21:(2, 1)  →  Day22:(3, 1)  →  Day23:(3, 1)
+    Day24:(3, 1)  →  Day25:(3, 1)  →  Day26:(3, 1)  →  Day27:(3, 1)  →  Day28:(3, 1)  →  Day29:(3, 1)
+    Day30:(3, 1)
+
+  UAV 1:
+    Day00:(3, 2)  →  Day01:(2, 2)  →  Day02:(2, 2)  →  Day03:(2, 2)  →  Day04:(2, 2)  →  Day05:(2, 2)
+    Day06:(1, 2)  →  Day07:(1, 2)  →  Day08:(1, 2)  →  Day09:(1, 2)  →  Day10:(1, 2)  →  Day11:(1, 2)
+    Day12:(1, 2)  →  Day13:(1, 2)  →  Day14:(1, 2)  →  Day15:(1, 2)  →  Day16:(1, 2)  →  Day17:(0, 2)
+    Day18:(0, 2)  →  Day19:(0, 2)  →  Day20:(0, 2)  →  Day21:(0, 2)  →  Day22:(0, 2)  →  Day23:(0, 2)
+    Day24:(0, 2)  →  Day25:(0, 2)  →  Day26:(0, 1)  →  Day27:(0, 1)  →  Day28:(0, 2)  →  Day29:(0, 2)
+    Day30:(0, 2)
+
+=================================================================
+  PER-DAY LOG
+=================================================================
+  Day  1  UAV0: STAY  → (0, 0)   E= 98.5  UAV1: NORTH → (2, 2)   E= 99.0  visited= 0/12  found=0  reward=  -0.19
+  Day  2  UAV0: STAY  → (0, 0)   E= 97.0  UAV1: STAY  → (2, 2)   E= 97.5  visited= 1/12  found=0  reward=  -0.20
+  Day  3  UAV0: STAY  → (0, 0)   E= 95.5  UAV1: STAY  → (2, 2)   E= 96.0  visited= 2/12  found=0  reward=  -0.20
+  Day  4  UAV0: STAY  → (0, 0)   E= 94.0  UAV1: STAY  → (2, 2)   E= 94.5  visited= 2/12  found=0  reward=  -0.20
+  Day  5  UAV0: STAY  → (0, 0)   E= 92.5  UAV1: STAY  → (2, 2)   E= 93.0  visited= 2/12  found=0  reward=  -0.20
+  Day  6  UAV0: STAY  → (0, 0)   E= 91.0  UAV1: NORTH → (1, 2)   E= 92.0  visited= 2/12  found=0  reward=  -0.35
+  Day  7  UAV0: STAY  → (0, 0)   E= 89.5  UAV1: STAY  → (1, 2)   E= 90.5  visited= 2/12  found=0  reward=  -0.36
+  Day  8  UAV0: STAY  → (0, 0)   E= 88.0  UAV1: STAY  → (1, 2)   E= 89.0  visited= 3/12  found=0  reward=  -0.36
+  Day  9  UAV0: STAY  → (0, 0)   E= 86.5  UAV1: STAY  → (1, 2)   E= 87.5  visited= 3/12  found=0  reward=  -0.36
+  Day 10  UAV0: STAY  → (0, 0)   E= 85.0  UAV1: STAY  → (1, 2)   E= 86.0  visited= 3/12  found=0  reward=  -0.36
+  Day 11  UAV0: SOUTH → (1, 0)   E= 84.0  UAV1: STAY  → (1, 2)   E= 84.5  visited= 3/12  found=0  reward=  -0.44
+  Day 12  UAV0: STAY  → (1, 0)   E= 82.5  UAV1: STAY  → (1, 2)   E= 83.0  visited= 3/12  found=0  reward=  -0.44
+  Day 13  UAV0: STAY  → (1, 0)   E= 81.0  UAV1: STAY  → (1, 2)   E= 81.5  visited= 4/12  found=1  reward=   1.55
+  Day 14  UAV0: STAY  → (1, 0)   E= 79.5  UAV1: EAST  → (1, 2)   E= 80.5  visited= 4/12  found=1  reward=   1.56
+  Day 15  UAV0: EAST  → (1, 1)   E= 78.5  UAV1: STAY  → (1, 2)   E= 79.0  visited= 4/12  found=1  reward=   1.46
+  Day 16  UAV0: NORTH → (0, 1)   E= 77.5  UAV1: STAY  → (1, 2)   E= 77.5  visited= 4/12  found=1  reward=   1.43
+  Day 17  UAV0: SOUTH → (1, 1)   E= 76.5  UAV1: NORTH → (0, 2)   E= 76.5  visited= 4/12  found=1  reward=   1.62
+  Day 18  UAV0: STAY  → (1, 1)   E= 75.0  UAV1: STAY  → (0, 2)   E= 75.0  visited= 4/12  found=1  reward=   1.61
+  Day 19  UAV0: SOUTH → (2, 1)   E= 74.0  UAV1: NORTH → (0, 2)   E= 74.0  visited= 4/12  found=1  reward=   1.91
+  Day 20  UAV0: STAY  → (2, 1)   E= 72.5  UAV1: STAY  → (0, 2)   E= 72.5  visited= 5/12  found=2  reward=   2.85
+  Day 21  UAV0: STAY  → (2, 1)   E= 71.0  UAV1: STAY  → (0, 2)   E= 71.0  visited= 6/12  found=2  reward=   2.09
+  Day 22  UAV0: SOUTH → (3, 1)   E= 70.0  UAV1: STAY  → (0, 2)   E= 69.5  visited= 6/12  found=2  reward=   2.22
+  Day 23  UAV0: STAY  → (3, 1)   E= 68.5  UAV1: NORTH → (0, 2)   E= 68.5  visited= 6/12  found=2  reward=   2.22
+  Day 24  UAV0: STAY  → (3, 1)   E= 67.0  UAV1: NORTH → (0, 2)   E= 67.5  visited= 7/12  found=3  reward=   3.02
+  Day 25  UAV0: STAY  → (3, 1)   E= 65.5  UAV1: NORTH → (0, 2)   E= 66.5  visited= 7/12  found=3  reward=   3.02
+  Day 26  UAV0: STAY  → (3, 1)   E= 64.0  UAV1: WEST  → (0, 1)   E= 65.5  visited= 7/12  found=3  reward=   3.61
+  Day 27  UAV0: STAY  → (3, 1)   E= 62.5  UAV1: STAY  → (0, 1)   E= 64.0  visited= 7/12  found=3  reward=   3.60
+  Day 28  UAV0: STAY  → (3, 1)   E= 61.0  UAV1: EAST  → (0, 2)   E= 63.0  visited= 7/12  found=3  reward=   3.02
+  Day 29  UAV0: STAY  → (3, 1)   E= 59.5  UAV1: STAY  → (0, 2)   E= 61.5  visited= 7/12  found=3  reward=   3.01
+  Day 30  UAV0: STAY  → (3, 1)   E= 58.0  UAV1: STAY  → (0, 2)   E= 60.0  visited= 7/12  found=3  reward=   3.01
+
+=================================================================
+  GRID STATE SNAPSHOTS (every 5 days)
+=================================================================
+
+  --- Day 00 (initial, all sectors unknown) ---
+     c0    c1    c2
+   +-----+-----+-----+
+r0 | ? A | ?   | ?   |
+   +-----+-----+-----+
+r1 | ?   | ?*  | ?   |
+   +-----+-----+-----+
+r2 | ?   | ?   | ?   |
+   +-----+-----+-----+
+r3 | ?   | ?   | ? B |
+   +-----+-----+-----+
+  (H=Healthy I=Infected ?=Unknown *=TrueInfected A=UAV0 B=UAV1)
+  Risk weights (w):
+    s00:0.00  s01:0.00  s02:0.00  
+    s03:0.00  s04:0.00  s05:0.00  
+    s06:0.00  s07:0.00  s08:0.00  
+    s09:0.00  s10:0.00  s11:0.00  
+
+  --- Day 05 ---
+     c0    c1    c2
+   +-----+-----+-----+
+r0 | H A | ?*  | ?*  |
+   +-----+-----+-----+
+r1 | ?*  | ?   | ?*  |
+   +-----+-----+-----+
+r2 | ?*  | ?*  | H*B |
+   +-----+-----+-----+
+r3 | ?*  | ?*  | ?*  |
+   +-----+-----+-----+
+  (H=Healthy I=Infected ?=Unknown *=TrueInfected A=UAV0 B=UAV1)
+  Risk weights (w):
+    s00:0.05  s01:0.00  s02:0.00  
+    s03:0.00  s04:0.00  s05:0.00  
+    s06:0.00  s07:0.00  s08:0.05  
+    s09:0.00  s10:0.00  s11:0.00  
+  UAV knowledge → Healthy:2  Infected:0  Unknown:10
+  Ground truth  → Infected:10
+  Energy → UAV0:92.5  UAV1:93.0
+
+  --- Day 10 ---
+     c0    c1    c2
+   +-----+-----+-----+
+r0 | H*A | ?*  | ?*  |
+   +-----+-----+-----+
+r1 | ?*  | ?*  | H*B |
+   +-----+-----+-----+
+r2 | ?   | ?*  | H*  |
+   +-----+-----+-----+
+r3 | ?   | ?   | ?   |
+   +-----+-----+-----+
+  (H=Healthy I=Infected ?=Unknown *=TrueInfected A=UAV0 B=UAV1)
+  Risk weights (w):
+    s00:0.05  s01:0.00  s02:0.00  
+    s03:0.00  s04:0.00  s05:0.05  
+    s06:0.00  s07:0.00  s08:0.30  
+    s09:0.00  s10:0.00  s11:0.00  
+  UAV knowledge → Healthy:3  Infected:0  Unknown:9
+  Ground truth  → Infected:8
+  Energy → UAV0:85.0  UAV1:86.0
+
+  --- Day 15 ---
+     c0    c1    c2
+   +-----+-----+-----+
+r0 | H*  | ?*  | ?*  |
+   +-----+-----+-----+
+r1 | I*  | ?*A | H*B |
+   +-----+-----+-----+
+r2 | ?*  | ?*  | H*  |
+   +-----+-----+-----+
+r3 | ?*  | ?*  | ?*  |
+   +-----+-----+-----+
+  (H=Healthy I=Infected ?=Unknown *=TrueInfected A=UAV0 B=UAV1)
+  Risk weights (w):
+    s00:0.30  s01:0.38  s02:0.20  
+    s03:1.00  s04:0.48  s05:0.05  
+    s06:0.48  s07:0.38  s08:0.55  
+    s09:0.25  s10:0.20  s11:0.10  
+  UAV knowledge → Healthy:3  Infected:1  Unknown:8
+  Ground truth  → Infected:12
+  Energy → UAV0:78.5  UAV1:79.0
+
+  --- Day 20 ---
+     c0    c1    c2
+   +-----+-----+-----+
+r0 | H*  | ?*  | I*B |
+   +-----+-----+-----+
+r1 | I*  | ?*  | H*  |
+   +-----+-----+-----+
+r2 | ?*  | ? A | H   |
+   +-----+-----+-----+
+r3 | ?   | ?   | ?*  |
+   +-----+-----+-----+
+  (H=Healthy I=Infected ?=Unknown *=TrueInfected A=UAV0 B=UAV1)
+  Risk weights (w):
+    s00:0.55  s01:0.87  s02:1.00  
+    s03:1.00  s04:0.87  s05:0.25  
+    s06:0.58  s07:0.58  s08:0.80  
+    s09:0.28  s10:0.26  s11:0.18  
+  UAV knowledge → Healthy:3  Infected:2  Unknown:7
+  Ground truth  → Infected:8
+  Energy → UAV0:72.5  UAV1:72.5
+
+  --- Day 25 ---
+     c0    c1    c2
+   +-----+-----+-----+
+r0 | H*  | ?*  | I*B |
+   +-----+-----+-----+
+r1 | I   | ?*  | H   |
+   +-----+-----+-----+
+r2 | ?   | H*  | H*  |
+   +-----+-----+-----+
+r3 | ?*  | I*A | ?   |
+   +-----+-----+-----+
+  (H=Healthy I=Infected ?=Unknown *=TrueInfected A=UAV0 B=UAV1)
+  Risk weights (w):
+    s00:0.80  s01:0.95  s02:1.00  
+    s03:1.00  s04:1.00  s05:0.50  
+    s06:0.97  s07:0.25  s08:1.00  
+    s09:0.76  s10:1.00  s11:0.66  
+  UAV knowledge → Healthy:4  Infected:3  Unknown:5
+  Ground truth  → Infected:8
+  Energy → UAV0:65.5  UAV1:66.5
+
+  --- Day 30 ---
+     c0    c1    c2
+   +-----+-----+-----+
+r0 | H   | ?*  | I*B |
+   +-----+-----+-----+
+r1 | I*  | ?   | H*  |
+   +-----+-----+-----+
+r2 | ?*  | H*  | H*  |
+   +-----+-----+-----+
+r3 | ?*  | I*A | ?   |
+   +-----+-----+-----+
+  (H=Healthy I=Infected ?=Unknown *=TrueInfected A=UAV0 B=UAV1)
+  Risk weights (w):
+    s00:1.00  s01:0.95  s02:1.00  
+    s03:1.00  s04:1.00  s05:0.75  
+    s06:0.97  s07:0.50  s08:1.00  
+    s09:0.76  s10:1.00  s11:0.66  
+  UAV knowledge → Healthy:4  Infected:3  Unknown:5
+  Ground truth  → Infected:9
+  Energy → UAV0:58.0  UAV1:60.0
+
+=================================================================
+  SECTOR ID MAP
+=================================================================
+     c0   c1   c2
+  r0    0     1     2  
+  r1    3     4     5  
+  r2    6     7     8  
+  r3    9    10    11  
+
+  LEGEND:
+    H  = Healthy (UAV diagnosed)
+    I  = Infected (UAV diagnosed)
+    ?  = Unknown (not yet visited)
+    *  = True infected sector (ground truth)
+    A  = UAV 0 position
+    B  = UAV 1 position
+=================================================================
